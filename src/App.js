@@ -22,12 +22,27 @@ function App() {
     /* console.log(numero); */
   }
 
+  const array = [
+
+    "pepe",
+    "jose",
+    "santi",
+    "miriam",
+    "mairam"
+
+  ]
+
   return (
     <div className="App">
       <button onClick={restar}>-</button>
       {numero}
       {numero === 7 ? <p>MI NUMERO ES siete</p> : <p>MI NUMERO NO ES siete</p>}
       <button onClick={sumar}>+</button>
+      {array.map((elemento) => {
+        return <div>
+          <p>{elemento}</p>
+        </div>
+      })}
     </div>
   );
 }
